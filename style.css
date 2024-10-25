@@ -1,0 +1,125 @@
+/* Styling for all elements */
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+/* Flex-Box for Body element */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 14px;
+}
+
+/* header and footer styles */
+header {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    color: #252323;
+}
+
+footer {
+    font-size: 0.75rem;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    color: #3F3B3B;
+}
+
+/* calculator styles */
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+}
+
+/* button styles */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+}
+
+.button {
+    width: 25%;
+    height: 100%;
+    border-radius: 0;
+    color: #F5F1ED;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.num-button {
+    border: 1px solid #3F3B3B;
+    background-color: #252323;
+}
+
+.num-button:active {
+    background-color: #3F3B3B;
+}
+
+.equal-button {
+    background-color: #c1121f;
+    border: 1px solid #EC323E;
+}
+
+.equal-button:active {
+    background-color: #EC323E;
+}
+
+.divide-button,
+.multiply-button,
+.subtract-button,
+.add-button {
+    background-color: #003049;
+    border: 1px solid #005D8F;
+}
+
+.divide-button:active,
+.multiply-button:active,
+.subtract-button:active,
+.add-button:active {
+    background-color: #005D8F;
+}
+
+/* input and output styles */
+
+.display {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background-color: #005D8F;
+    color: #F5F1ED;
+}
+
+.input,
+.output {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
