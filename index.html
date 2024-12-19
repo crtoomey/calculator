@@ -18,47 +18,41 @@
     <header>Calculator</header>
 
     <section class="calculator-container">
-        <div class="display">
-            <div class="input">
-                <p class="display-input">
-                    <span class="first-number"></span><span class="operator"></span><span class="second-number"></span>
-                </p>
 
-            </div>
-            <div class="output">
-                <p class="display-output">
-                    = <span class="result">0</span>
-                </p>
-            </div>
+        <div class="calc-display">
+            <span class="num-display">0</span>
         </div>
+
         <div class="button-container">
             <div class="button-row">
-                <button value="7" class="button num-button" onclick="getInput(7)">7</button>
-                <button value="8" class="button num-button" onclick="getInput(8)">8</button>
-                <button value="9" class="button num-button" onclick="getInput(9)">9</button>
-                <button class="button divide-button" onclick="operatorHasBeenClicked('/')">/</button>
+                <button class="button green-button">Clear</button>
+                <button class="button green-button">+/-</button>
+                <button class="button green-button">%</button>
+                <button class="button orange-button">/</button>
             </div>
             <div class="button-row">
-                <button value="4" class="button num-button" onclick="getInput(4)">4</button>
-                <button value="5" class="button num-button" onclick="getInput(5)">5</button>
-                <button value="6" class="button num-button" onclick="getInput(6)">6</button>
-                <button class="button multiply-button" onclick="operatorHasBeenClicked('*')">*</button>
+                <button class="button blue-button">7</button>
+                <button class="button blue-button">8</button>
+                <button class="button blue-button">9</button>
+                <button class="button orange-button">*</button>
             </div>
             <div class="button-row">
-                <button value="1" class="button num-button" onclick="getInput(1)">1</button>
-                <button value="2" class="button num-button" onclick="getInput(2)">2</button>
-                <button value="3" class="button num-button" onclick="getInput(3)">3</button>
-                <button class="button subtract-button" onclick="operatorHasBeenClicked('-')">-</button>
+                <button class="button blue-button">4</button>
+                <button class="button blue-button">5</button>
+                <button class="button blue-button">6</button>
+                <button class="button orange-button">-</button>
             </div>
             <div class="button-row">
-                <button value="0" class="button num-button" onclick="getInput(0)">0</button>
-                <button value="." class="button num-button">.</button>
-                <button class="button equal-button" onclick="operate(firstNumber, secondNumber, operator)">=</button>
-                <button class="button add-button" onclick="operatorHasBeenClicked('+')">+</button>
+                <button class="button blue-button">1</button>
+                <button class="button blue-button">2</button>
+                <button class="button blue-button">3</button>
+                <button class="button orange-button">+</button>
             </div>
-        </div>
-        <div class="clear-row">
-            <button class="clear-button">Clear</button>
+            <div class="button-row">
+                <button class="button blue-button" id="zero-button">0</button>
+                <button class="button blue-button">.</button>
+                <button class="button orange-button">=</button>
+            </div>
         </div>
 
     </section>
