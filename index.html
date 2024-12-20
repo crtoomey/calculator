@@ -20,7 +20,7 @@
     <section class="calculator-container">
 
         <div class="calc-display">
-            <span class="num-display">0</span>
+            <span id="default-num" style="display: block;">0</span><span class="num-display"></span>
         </div>
 
         <div class="button-container">
@@ -28,30 +28,30 @@
                 <button class="button green-button">Clear</button>
                 <button class="button green-button">+/-</button>
                 <button class="button green-button">%</button>
-                <button class="button orange-button">/</button>
+                <button class="button orange-button" onclick="getOperator('/')">/</button>
             </div>
             <div class="button-row">
-                <button class="button blue-button">7</button>
-                <button class="button blue-button">8</button>
-                <button class="button blue-button">9</button>
-                <button class="button orange-button">*</button>
+                <button class="button blue-button" onclick="updateDisplay(7)">7</button>
+                <button class="button blue-button" onclick="updateDisplay(8)">8</button>
+                <button class="button blue-button" onclick="updateDisplay(9)">9</button>
+                <button class="button orange-button" onclick="getOperator('*')">*</button>
             </div>
             <div class="button-row">
-                <button class="button blue-button">4</button>
-                <button class="button blue-button">5</button>
-                <button class="button blue-button">6</button>
-                <button class="button orange-button">-</button>
+                <button class="button blue-button" onclick="updateDisplay(4)">4</button>
+                <button class="button blue-button" onclick="updateDisplay(5)">5</button>
+                <button class="button blue-button" onclick="updateDisplay(6)">6</button>
+                <button class="button orange-button" onclick="getOperator('-')">-</button>
             </div>
             <div class="button-row">
-                <button class="button blue-button">1</button>
-                <button class="button blue-button">2</button>
-                <button class="button blue-button">3</button>
-                <button class="button orange-button">+</button>
+                <button class="button blue-button" onclick="updateDisplay(1)">1</button>
+                <button class="button blue-button" onclick="updateDisplay(2)">2</button>
+                <button class="button blue-button" onclick="updateDisplay(3)">3</button>
+                <button class="button orange-button" onclick="getOperator('+')">+</button>
             </div>
             <div class="button-row">
-                <button class="button blue-button" id="zero-button">0</button>
+                <button class="button blue-button" id="zero-button" onclick="updateDisplay(0)">0</button>
                 <button class="button blue-button">.</button>
-                <button class="button orange-button">=</button>
+                <button class="button orange-button" onclick="performOperation()">=</button>
             </div>
         </div>
 
