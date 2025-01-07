@@ -4,7 +4,6 @@ let secondNum = null;
 let operator = null;
 let currentInput = '';
 let displayElement = document.querySelector('.num-display');
-let defaultNum = document.getElementById('default-num');
 
 // Math functions
 function add(a, b) {
@@ -52,7 +51,11 @@ function performOperation() {
     if (currentInput !== '' && operator) {
         secondNum = Number(currentInput);
         let result = operate(firstNum, secondNum, operator);
-        displayElement.innerText = result;
+        if (isFloat(result) === true) {
+            displayElement.innerText = result.toFixed(5);
+        } else if (isFloat(result) === false) {
+            displayElement.innerText = result;
+        }
         firstNum = result;
         operator = null;
         currentInput = '';
@@ -68,12 +71,38 @@ function operate(firstNumber, secondNumber, operator) {
     } else if (operator === '*') {
         result = multiply(firstNumber, secondNumber);
     } else if (operator === '/') {
-        result = divide(firstNumber, secondNumber);
+        if (secondNumber === 0) {
+            result = 'Can\'t divide by 0!'
+        } else {
+            result = divide(firstNumber, secondNumber);
+        }
     } else {
         console.log('ERROR');
     }
-    displayElement.innerText = result;
+
+    if (isFloat(result) === true) {
+        displayElement.innerText = result.toFixed(5);
+    } else if (isFloat(result) === false) {
+        displayElement.innerText = result;
+    }
+
     return result;
+}
+
+// function to clear all data from calc
+function clearData() {
+    console.log('Clear!')
+    firstNum = null;
+    secondNum = null;
+    operator = null;
+    currentInput = '';
+    displayElement.innerText = '';
+    console.log(firstNum, secondNum, operator)
+}
+
+// function to check if a number is a float (for rounding)
+function isFloat(n) {
+    return Number(n) === n && n % 1 !== 0;
 }
 
 
