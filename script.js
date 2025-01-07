@@ -18,6 +18,9 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
+function modulo(a, b) {
+    return a % b;
+}
 
 // Function to handle getting a number and updating the display
 function updateDisplay(input) {
@@ -42,9 +45,15 @@ function getOperator(input) {
 
     operator = input;
     currentInput = '';
-
 }
 
+// function to make number positive or negative (does not work as intended rn)
+function makePositiveOrNegative() {
+    // num = currentInput;
+    // num * -1;
+    // currentInput = num;
+    return currentInput = -parseInt(currentInput)
+}
 
 // func to perform operation on equals click
 function performOperation() {
@@ -76,6 +85,8 @@ function operate(firstNumber, secondNumber, operator) {
         } else {
             result = divide(firstNumber, secondNumber);
         }
+    } else if (operator === '%') {
+        result = modulo(firstNumber, secondNumber);
     } else {
         console.log('ERROR');
     }
@@ -111,3 +122,4 @@ function isFloat(n) {
 // console.log(subtract(1, 2))
 // console.log(multiply(1, 2))
 // console.log(divide(1, 2))
+// console.log(modulo(11, 3))

@@ -87,6 +87,10 @@ footer {
     background-color: #ED9121;
 }
 
+.orange-button:hover {
+    background-color: #ED8021;
+}
+
 .blue-button {
     background-color: #2b547e;
 }

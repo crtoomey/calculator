@@ -26,27 +26,27 @@
         <div class="button-container">
             <div class="button-row">
                 <button class="button green-button" onclick="clearData()">Clear</button>
-                <button class="button green-button">+/-</button>
-                <button class="button green-button">%</button>
-                <button class="button orange-button" onclick="getOperator('/')">/</button>
+                <button class="button green-button" onclick="makePositiveOrNegative()">+/-</button>
+                <button class="button green-button" onclick="getOperator('%')">%</button>
+                <button class="button orange-button" id="divide-button" onclick="getOperator('/')">/</button>
             </div>
             <div class="button-row">
                 <button class="button blue-button" onclick="updateDisplay(7)">7</button>
                 <button class="button blue-button" onclick="updateDisplay(8)">8</button>
                 <button class="button blue-button" onclick="updateDisplay(9)">9</button>
-                <button class="button orange-button" onclick="getOperator('*')">*</button>
+                <button class="button orange-button" id="multiply-button" onclick="getOperator('*')">*</button>
             </div>
             <div class="button-row">
                 <button class="button blue-button" onclick="updateDisplay(4)">4</button>
                 <button class="button blue-button" onclick="updateDisplay(5)">5</button>
                 <button class="button blue-button" onclick="updateDisplay(6)">6</button>
-                <button class="button orange-button" onclick="getOperator('-')">-</button>
+                <button class="button orange-button" id="subtract-button" onclick="getOperator('-')">-</button>
             </div>
             <div class="button-row">
                 <button class="button blue-button" onclick="updateDisplay(1)">1</button>
                 <button class="button blue-button" onclick="updateDisplay(2)">2</button>
                 <button class="button blue-button" onclick="updateDisplay(3)">3</button>
-                <button class="button orange-button" onclick="getOperator('+')">+</button>
+                <button class="button orange-button" id="addition-button" onclick="getOperator('+')">+</button>
             </div>
             <div class="button-row">
                 <button class="button blue-button" id="zero-button" onclick="updateDisplay(0)">0</button>
