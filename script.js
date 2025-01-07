@@ -47,12 +47,23 @@ function getOperator(input) {
     currentInput = '';
 }
 
-// function to make number positive or negative (does not work as intended rn)
+// function to make number positive or negative
 function makePositiveOrNegative() {
     // num = currentInput;
     // num * -1;
     // currentInput = num;
-    return currentInput = -parseInt(currentInput)
+    currentInput = operate(currentInput, -1, '*')
+}
+
+// function to add decimal
+function addDecimal() {
+    if (currentInput % 1 === 0) {
+        currentInput += '.';
+        displayElement.innerText = currentInput;
+    } else {
+        document.getElementById("decimal-button").disabled = true;
+    }
+
 }
 
 // func to perform operation on equals click
