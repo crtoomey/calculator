@@ -49,9 +49,6 @@ function getOperator(input) {
 
 // function to make number positive or negative
 function makePositiveOrNegative() {
-    // num = currentInput;
-    // num * -1;
-    // currentInput = num;
     currentInput = operate(currentInput, -1, '*')
 }
 
@@ -63,7 +60,12 @@ function addDecimal() {
     } else {
         document.getElementById("decimal-button").disabled = true;
     }
+}
 
+// function to backspace last input (should only be 1 number)
+function deleteLastInput() {
+    currentInput = currentInput.slice(0, -1);
+    displayElement.innerText = currentInput;
 }
 
 // func to perform operation on equals click
@@ -118,8 +120,7 @@ function clearData() {
     secondNum = null;
     operator = null;
     currentInput = '';
-    displayElement.innerText = '';
-    console.log(firstNum, secondNum, operator)
+    displayElement.innerText = '0';
 }
 
 // function to check if a number is a float (for rounding)

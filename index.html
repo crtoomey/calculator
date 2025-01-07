@@ -20,7 +20,7 @@
     <section class="calculator-container">
 
         <div class="calc-display">
-            <span class="num-display"></span>
+            <span class="num-display">0</span>
         </div>
 
         <div class="button-container">
@@ -51,6 +51,7 @@
             <div class="button-row">
                 <button class="button blue-button" id="zero-button" onclick="updateDisplay(0)">0</button>
                 <button class="button blue-button" id="decimal-button" onclick="addDecimal()">.</button>
+                <button class="button blue-button" onclick="deleteLastInput()">&lt;</button>
                 <button class="button orange-button" onclick="performOperation()">=</button>
             </div>
         </div>
